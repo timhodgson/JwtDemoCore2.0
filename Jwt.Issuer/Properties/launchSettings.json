@@ -29,7 +29,9 @@
       "applicationUrl": "http://localhost:49843"
     },
     "IIS": {
-      "commandName": "IIS"
+      "commandName": "IIS",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost/Jwt.Issuer"
     }
   }
 }
