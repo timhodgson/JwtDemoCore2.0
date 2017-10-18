@@ -72,7 +72,7 @@ namespace SecTest
 
     private static async Task<String> GetLoginStatus(String jwt)
     {
-      var url = "http://localhost/Jwt.Resources.WebAPI/";
+      var url = "http://localhost:50249/Jwt.Resources.WebAPI/";
       var apiUrl = $"/api/employee/loginstatus";
 
       using (var client = new HttpClient() { BaseAddress = new Uri(url) })
@@ -93,7 +93,7 @@ namespace SecTest
 
     private static async Task<String> GetEmployee(String jwt, String email)
     {
-      var url = "http://localhost/Jwt.Resources.WebAPI/";
+      var url = "http://localhost:50249/Jwt.Resources.WebAPI/";
       var apiUrl = $"/api/employee/{WebUtility.UrlEncode(email)}";
 
       using (var client = new HttpClient() { BaseAddress = new Uri(url) })
@@ -128,7 +128,7 @@ namespace SecTest
 
     private static async Task<String> GetEmployees(String jwt)
     {
-      var url = "http://localhost/Jwt.Resources.WebAPI/";
+      var url = "http://localhost:50249/Jwt.Resources.WebAPI/";
       var apiUrl = $"/api/employee/";
 
       using (var client = new HttpClient() { BaseAddress = new Uri(url) })

@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost/Jwt.Resources.WebApi",
+      "applicationUrl": "http://localhost:88/Jwt.Resources.WebApi",
       "sslPort": 0
     },
     "iisExpress": {
@@ -28,9 +28,6 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:50250/"
-    },
-    "IIS": {
-      "commandName": "IIS"
     }
   }
 }
