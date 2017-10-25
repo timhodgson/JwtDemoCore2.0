@@ -16,6 +16,7 @@ using Jwt.Issuer.Models.ManageViewModels;
 
 namespace Controllers
 {
+    /*
   [Authorize]
   [Route("[controller]/[action]")]
   public class ManageController : Controller
@@ -502,4 +503,5 @@ namespace Controllers
 
     #endregion
   }
+  */
 }

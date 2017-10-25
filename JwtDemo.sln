@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.Shared", "Jwt.Shared\Jw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.ConsoleDemo", "ConsoleDemo\Jwt.ConsoleDemo.csproj", "{FC6FACD3-E56E-4982-9862-29AD9089DF58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExUtils", "..\ExUtils\ExUtils.csproj", "{AEDE58C5-834A-4991-9806-2C329A949FE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{FC6FACD3-E56E-4982-9862-29AD9089DF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC6FACD3-E56E-4982-9862-29AD9089DF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC6FACD3-E56E-4982-9862-29AD9089DF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

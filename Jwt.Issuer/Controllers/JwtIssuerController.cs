@@ -35,6 +35,17 @@ namespace Security.Controllers
             RoleManager = roleManager;
         }
 
+        protected string GetUsers()
+        {
+            string result = null;
+            IQueryable<ApplicationUser> users = UserManager.Users;
+            foreach ( ApplicationUser user in users)
+            {
+                result = string.Format("E: {0}, ", user.Email) + result;
+            }
+            return result;
+        }
+
 
         [HttpPost(nameof(Login))]
         public async Task<IActionResult> Login([FromBody] LoginResource resource)
@@ -46,7 +57,7 @@ namespace Security.Controllers
 
             if (user == null)
             {
-                return BadRequest("Invalid credentials.  Cannot find user.");
+                return BadRequest(string.Format("Invalid credentials.  Cannot find user.  User List: {0}", GetUsers()));
             }
             if (!(await SignInManager.PasswordSignInAsync(user, resource.Password, false, false)).Succeeded)
             {

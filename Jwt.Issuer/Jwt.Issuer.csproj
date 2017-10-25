@@ -42,6 +42,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ExUtils\ExUtils.csproj" />
     <ProjectReference Include="..\CoreFrameWork\CoreFrameWork.csproj" />
     <ProjectReference Include="..\Jwt.Shared\Jwt.Shared.csproj" />
   </ItemGroup>

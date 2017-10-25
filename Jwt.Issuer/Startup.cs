@@ -109,8 +109,8 @@ namespace Security
             }
 
             // Fill empty inmemory database during development
-            if (env.IsDevelopment())
-                app.InitDb();
+            //if (env.IsDevelopment())
+            app.InitDb();
 
             app.UseStaticFiles();
 

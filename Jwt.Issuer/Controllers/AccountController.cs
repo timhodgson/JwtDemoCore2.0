@@ -17,6 +17,7 @@ using Security.Controllers;
 
 namespace Controllers
 {
+    /*
   [Authorize]
   [Route("[controller]/[action]")]
   public class AccountController : Controller
@@ -462,4 +463,5 @@ namespace Controllers
 
     #endregion
   }
+  */
 }
