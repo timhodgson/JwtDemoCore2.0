@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 
 namespace Security.Controllers
 {
-    [AllowAnonymous]
     [Route("api/security")]
     public class JwtIssuerController : Controller
     {
@@ -35,7 +34,10 @@ namespace Security.Controllers
             RoleManager = roleManager;
         }
 
-        protected string GetUsers()
+        [Authorize]
+        [HttpGet]
+        [Route("UserListString")]
+        public IActionResult GetUserListString()
         {
             string result = null;
             IQueryable<ApplicationUser> users = UserManager.Users;
@@ -43,10 +45,11 @@ namespace Security.Controllers
             {
                 result = string.Format("E: {0}, ", user.Email) + result;
             }
-            return result;
+            return Ok(result);
         }
 
 
+        [AllowAnonymous]
         [HttpPost(nameof(Login))]
         public async Task<IActionResult> Login([FromBody] LoginResource resource)
         {
@@ -57,7 +60,7 @@ namespace Security.Controllers
 
             if (user == null)
             {
-                return BadRequest(string.Format("Invalid credentials.  Cannot find user.  User List: {0}", GetUsers()));
+                return BadRequest(string.Format("Invalid credentials.  Cannot find user."));
             }
             if (!(await SignInManager.PasswordSignInAsync(user, resource.Password, false, false)).Succeeded)
             {
@@ -140,6 +143,7 @@ namespace Security.Controllers
         /// </summary>
         /// <param name="jwtToken"></param>
         /// <returns>New JWt token with refreshed claims and a new timespan for expiration</returns>
+        [AllowAnonymous]
         [HttpPost(nameof(RenewToken))]
         public async Task<IActionResult> RenewToken(String jwtToken)
         {

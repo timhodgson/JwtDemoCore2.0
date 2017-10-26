@@ -13,12 +13,14 @@ namespace SecTest
     {
         static void Main(String[] args)
         {
+            Console.WriteLine("Sliding Demo");
             SlidingDemo();
-/*
+
+            Console.WriteLine("GetEmployeesDemo Demo");
             GetEmployeesDemo();
 
+            Console.WriteLine("ClaimBasedContentDemo Demo");
             ClaimBasedContentDemo();
-*/
 
             Console.WriteLine($"{Environment.NewLine}Ready, press key to close");
             Console.ReadKey();
@@ -36,8 +38,15 @@ namespace SecTest
 
         private static async Task<String> RenewJwt(String jwt)
         {
-            var url = "http://localhost/";
-            var apiUrl = "/Jwt.Issuer/api/security/renewtoken/";
+            var url = "";
+            var apiUrl = "";
+#if DEBUG            
+            url = "http://localhost:49842/";
+            apiUrl = "/api/security/renewtoken/";
+#else
+            url = "http://localhost/";
+            apiUrl = "/Jwt.Issuer/api/security/renewtoken/";
+#endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })
             {
@@ -152,8 +161,15 @@ namespace SecTest
 
         private static async Task<String> Login(String email, String password)
         {
-            var url = "http://localhost/";
-            var apiUrl = "/Jwt.Issuer/api/security/login/";
+            var url = "";
+            var apiUrl = "";
+#if DEBUG            
+            url = "http://localhost:49842/";
+            apiUrl = "/api/security/login/";
+#else
+            url = "http://localhost/";
+            apiUrl = "/Jwt.Issuer/api/security/login/";
+#endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })
             {
