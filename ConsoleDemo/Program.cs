@@ -14,11 +14,10 @@ namespace SecTest
         static void Main(String[] args)
         {
             SlidingDemo();
-/*
+
             GetEmployeesDemo();
 
             ClaimBasedContentDemo();
-*/
 
             Console.WriteLine($"{Environment.NewLine}Ready, press key to close");
             Console.ReadKey();
@@ -61,8 +60,8 @@ namespace SecTest
             // each token represents a different identity
             var tokens = new String[]
             {
-       Login("hrworker@xyz.com", "password").Result,
-       Login("employee@xyz.com", "password").Result
+               Login("hrworker@xyz.com", "password").Result,
+               Login("employee@xyz.com", "password").Result
             };
 
             foreach (var token in tokens)
