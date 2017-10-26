@@ -70,8 +70,8 @@ namespace SecTest
             // each token represents a different identity
             var tokens = new String[]
             {
-       Login("hrworker@xyz.com", "password").Result,
-       Login("employee@xyz.com", "password").Result
+               Login("hrworker@xyz.com", "password").Result,
+               Login("employee@xyz.com", "password").Result
             };
 
             foreach (var token in tokens)
