@@ -29,11 +29,19 @@ namespace SecTest
 
         private static void SlidingDemo()
         {
-            var jwt = Login("hrworker@xyz.com", "password").Result;
+            try
+            {
+                var jwt = Login("hrworker@xyz.com", "password").Result;
 
-            Task.Delay(1000).Wait();
+                Task.Delay(1000).Wait();
 
-            var renewed = RenewJwt(jwt).Result;
+                var renewed = RenewJwt(jwt).Result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
 
         private static async Task<String> RenewJwt(String jwt)
@@ -67,18 +75,26 @@ namespace SecTest
 
         private static void ClaimBasedContentDemo()
         {
-            // each token represents a different identity
-            var tokens = new String[]
+            try
             {
-               Login("hrworker@xyz.com", "password").Result,
-               Login("employee@xyz.com", "password").Result
-            };
+                // each token represents a different identity
+                var tokens = new String[]
+                {
+                   Login("hrworker@xyz.com", "password").Result,
+                   Login("employee@xyz.com", "password").Result
+                };
 
-            foreach (var token in tokens)
+                foreach (var token in tokens)
+                {
+                    Console.WriteLine(GetLoginStatus(token).Result);
+                    Console.WriteLine(GetEmployee(token, "jadds4z@1688.com").Result);
+                    Console.WriteLine("");
+                }
+            }
+            catch (Exception ex)
             {
-                Console.WriteLine(GetLoginStatus(token).Result);
-                Console.WriteLine(GetEmployee(token, "jadds4z@1688.com").Result);
-                Console.WriteLine("");
+                Console.WriteLine(ex.Message);
+                throw;
             }
         }
 
@@ -127,14 +143,22 @@ namespace SecTest
 
         private static void GetEmployeesDemo()
         {
-            Console.WriteLine("Request Token");
-            var jwt = Login("employee@xyz.com", "password").Result;
-            Console.WriteLine($"Token : {jwt}");
-            Console.WriteLine("");
+            try
+            {
+                Console.WriteLine("Request Token");
+                var jwt = Login("employee@xyz.com", "password").Result;
+                Console.WriteLine($"Token : {jwt}");
+                Console.WriteLine("");
 
-            var document = GetEmployees(jwt).Result;
-            Console.WriteLine($"Employees: {document}");
-            Console.WriteLine("");
+                var document = GetEmployees(jwt).Result;
+                Console.WriteLine($"Employees: {document}");
+                Console.WriteLine("");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
 
 
@@ -195,8 +219,8 @@ namespace SecTest
                         }
                         else
                         {
-                            return string.Format("Uri={2}, Status Code={0}, Error={1}", response.StatusCode, response.ReasonPhrase,
-                                response.RequestMessage.RequestUri.AbsoluteUri);
+                            throw new Exception(string.Format("Uri={2}, Status Code={0}, Error={1}", response.StatusCode, response.ReasonPhrase,
+                                response.RequestMessage.RequestUri.AbsoluteUri));
                         }
 
                     }
