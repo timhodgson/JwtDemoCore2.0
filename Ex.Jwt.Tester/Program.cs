@@ -15,9 +15,9 @@ namespace Ex.Jwt.Tester
         {
             Console.WriteLine("Ex.Jwt.Tester");
             Console.WriteLine("Sliding Demo");
-            string jwt = SlidingDemo();
+            string jsonWebToken = SlidingDemo();
 
-            Console.WriteLine(GetValue(jwt, "jadds4z@1688.com").Result);
+            Console.WriteLine(GetValue(jsonWebToken, "jadds4z@1688.com").Result);
 
             //             if (env.IsDevelopment())
             {
@@ -34,12 +34,12 @@ namespace Ex.Jwt.Tester
         {
             try
             {
-                var jwt = Login("hrworker@xyz.com", "password").Result;
-                if ( jwt != null )
+                var jsonWebToken = Login("hrworker@xyz.com", "password").Result;
+                if ( jsonWebToken != null )
                 {
                     Console.WriteLine("Logged in");
                     Task.Delay(1000).Wait();
-                    var renewed = RenewJwt(jwt).Result;
+                    var renewed = RenewJwt(jsonWebToken).Result;
                     if (renewed != null)
                     {
                         Console.WriteLine("JWT renewed");
@@ -53,7 +53,7 @@ namespace Ex.Jwt.Tester
                 {
                     Console.WriteLine("Login failed");
                 }
-                return jwt;
+                return jsonWebToken;
             }
             catch (Exception ex)
             {
@@ -63,7 +63,7 @@ namespace Ex.Jwt.Tester
             return null;
         }
 
-        private static async Task<String> GetValue(String jwt, String email)
+        private static async Task<String> GetValue(String jsonWebToken, String email)
         {
             var url = "http://localhost:41932";
             var apiUrl = $"/api/values/{WebUtility.UrlEncode(email)}";
@@ -72,7 +72,7 @@ namespace Ex.Jwt.Tester
             {
                 client.BaseAddress = new Uri(url);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {jwt}");
+                client.DefaultRequestHeaders.Add("Authorization", $"Bearer {jsonWebToken}");
 
                 using (var response = await client.GetAsync(apiUrl))
                 {
@@ -89,9 +89,9 @@ namespace Ex.Jwt.Tester
         /// <summary>
         /// Renews a JWT, simply by specifying it.
         /// </summary>
-        /// <param name="jwt">The JWT</param>
+        /// <param name="jsonWebToken">The JWT</param>
         /// <returns></returns>
-        private static async Task<String> RenewJwt(String jwt)
+        private static async Task<String> RenewJwt(String jsonWebToken)
         {
             var url = "";
             var apiUrl = "";
@@ -107,7 +107,7 @@ namespace Ex.Jwt.Tester
             {
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                using (var content = new FormUrlEncodedContent(new Dictionary<String, String>() { { "", jwt } }))
+                using (var content = new FormUrlEncodedContent(new Dictionary<String, String>() { { "", jsonWebToken } }))
                 {
                     using (var response = await client.PostAsync(apiUrl, content))
                     {

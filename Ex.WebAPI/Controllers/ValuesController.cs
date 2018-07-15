@@ -18,9 +18,9 @@ namespace Ex.WebAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string id)
         {
-            return "value";
+            return string.Format($"Received: {id}");
         }
 
         // POST api/values
