@@ -1,4 +1,4 @@
-﻿using Jwt.Issuer.Models;
+﻿using Ex.Jwt.Issuer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace Jwt.Issuer.Models.ManageViewModels
+namespace Ex.Jwt.Issuer.Models.ManageViewModels
 {
     public class ExternalLoginsViewModel
     {

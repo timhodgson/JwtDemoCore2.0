@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using Jwt.Issuer.Services;
+using Ex.Jwt.Issuer.Services;
 using Security.Services;
 
-namespace Jwt.Issuer.Services
+namespace Ex.Jwt.Issuer.Services
 {
   public static class EmailSenderExtensions
   {

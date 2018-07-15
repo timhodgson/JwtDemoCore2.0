@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Security.Models;
 using Security.Services;
-using Jwt.Issuer.Models.ManageViewModels;
+using Ex.Jwt.Issuer.Models.ManageViewModels;
 
 namespace Controllers
 {

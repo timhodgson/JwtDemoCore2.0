@@ -1,6 +1,6 @@
 using System;
 
-namespace Jwt.Issuer.Models
+namespace Ex.Jwt.Issuer.Models
 {
     public class ErrorViewModel
     {

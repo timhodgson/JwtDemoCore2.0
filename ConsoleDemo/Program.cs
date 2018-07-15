@@ -53,7 +53,7 @@ namespace SecTest
             apiUrl = "/api/security/renewtoken/";
 #else
             url = "http://localhost/";
-            apiUrl = "/Jwt.Issuer/api/security/renewtoken/";
+            apiUrl = "/Ex.Jwt.Issuer/api/security/renewtoken/";
 #endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })
@@ -188,11 +188,11 @@ namespace SecTest
             var url = "";
             var apiUrl = "";
 #if DEBUG            
-            url = "http://localhost:49842/"; // Jwt.Issuer project!
+            url = "http://localhost:49842/"; // Ex.Jwt.Issuer project!
             apiUrl = "/api/security/login/";
 #else
             url = "http://localhost/";
-            apiUrl = "/Jwt.Issuer/api/security/login/";
+            apiUrl = "/Ex.Jwt.Issuer/api/security/login/";
 #endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })

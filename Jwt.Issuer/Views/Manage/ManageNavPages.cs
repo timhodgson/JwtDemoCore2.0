@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace Jwt.Issuer.Views.Manage
+namespace Ex.Jwt.Issuer.Views.Manage
 {
     public static class ManageNavPages
     {

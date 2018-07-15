@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Jwt.Issuer.Models.ManageViewModels
+namespace Ex.Jwt.Issuer.Models.ManageViewModels
 {
     public class EnableAuthenticatorViewModel
     {

@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost/Jwt.Issuer",
+      "applicationUrl": "http://localhost/Ex.Jwt.Issuer",
       "sslPort": 0
     },
     "iisExpress": {

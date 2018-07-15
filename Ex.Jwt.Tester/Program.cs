@@ -96,11 +96,11 @@ namespace Ex.Jwt.Tester
             var url = "";
             var apiUrl = "";
 #if DEBUG            
-            url = "http://localhost:49842/"; // Ex.Jwt.Issuer
+            url = "http://localhost:49842/"; // Ex.Ex.Jwt.Issuer
             apiUrl = "/api/security/renewtoken/";
 #else
             url = "http://localhost/";
-            apiUrl = "/Jwt.Issuer/api/security/renewtoken/";
+            apiUrl = "/Ex.Jwt.Issuer/api/security/renewtoken/";
 #endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })
@@ -122,7 +122,7 @@ namespace Ex.Jwt.Tester
 
         #region Login
         /// <summary>
-        /// Login to the Ex.Jwt.Issuer WebAPI
+        /// Login to the Ex.Ex.Jwt.Issuer WebAPI
         /// </summary>
         /// <param name="email"></param>
         /// <param name="password"></param>
@@ -132,11 +132,11 @@ namespace Ex.Jwt.Tester
             var url = "";
             var apiUrl = "";
 #if DEBUG            
-            url = "http://localhost:49842/"; // Jwt.Issuer project!
+            url = "http://localhost:49842/"; // Ex.Jwt.Issuer project!
             apiUrl = "/api/security/login/";
 #else
             url = "http://localhost/";
-            apiUrl = "/Jwt.Issuer/api/security/login/";
+            apiUrl = "/Ex.Jwt.Issuer/api/security/login/";
 #endif
 
             using (var client = new HttpClient() { BaseAddress = new Uri(url) })
