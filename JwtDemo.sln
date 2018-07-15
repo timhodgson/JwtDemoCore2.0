@@ -15,13 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Resources.WebApi", "Resources.WebApi\Resources.WebApi.csproj", "{0E509F41-4731-47E6-899D-6269EA3C1E29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.Issuer", "Jwt.Issuer\Jwt.Issuer.csproj", "{26CCBE5E-9E04-4644-BCB3-DCC66B2F856A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex.Jwt.Issuer", "Jwt.Issuer\Ex.Jwt.Issuer.csproj", "{26CCBE5E-9E04-4644-BCB3-DCC66B2F856A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.Shared", "Jwt.Shared\Jwt.Shared.csproj", "{727DCE7C-1F7A-446D-A037-2100516D8093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex.Jwt.Shared", "Jwt.Shared\Ex.Jwt.Shared.csproj", "{727DCE7C-1F7A-446D-A037-2100516D8093}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jwt.ConsoleDemo", "ConsoleDemo\Jwt.ConsoleDemo.csproj", "{FC6FACD3-E56E-4982-9862-29AD9089DF58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExUtils", "..\ExUtils\ExUtils.csproj", "{AEDE58C5-834A-4991-9806-2C329A949FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex.WebAPI", "Ex.WebAPI\Ex.WebAPI.csproj", "{67AC86CE-6FFF-41DD-91E5-16ACFC06BFBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex.Jwt.Tester", "Ex.Jwt.Tester\Ex.Jwt.Tester.csproj", "{144528F8-48D6-4CA2-8688-A47C3CFE854A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEDE58C5-834A-4991-9806-2C329A949FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AC86CE-6FFF-41DD-91E5-16ACFC06BFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AC86CE-6FFF-41DD-91E5-16ACFC06BFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AC86CE-6FFF-41DD-91E5-16ACFC06BFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AC86CE-6FFF-41DD-91E5-16ACFC06BFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{144528F8-48D6-4CA2-8688-A47C3CFE854A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144528F8-48D6-4CA2-8688-A47C3CFE854A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144528F8-48D6-4CA2-8688-A47C3CFE854A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144528F8-48D6-4CA2-8688-A47C3CFE854A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

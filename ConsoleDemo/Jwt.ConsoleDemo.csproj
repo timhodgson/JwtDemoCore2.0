@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreFrameWork\CoreFrameWork.csproj" />
-    <ProjectReference Include="..\Jwt.Shared\Jwt.Shared.csproj" />
+    <ProjectReference Include="..\Jwt.Shared\Ex.Jwt.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -42,9 +42,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Jwt.Shared\Jwt.Shared.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Views\Account\AccessDenied.cshtml" />
     <None Include="Views\Account\ConfirmEmail.cshtml" />
     <None Include="Views\Account\ExternalLogin.cshtml" />
@@ -71,6 +68,9 @@
     <None Include="Views\Manage\_ManageNav.cshtml" />
     <None Include="Views\Manage\_StatusMessage.cshtml" />
     <None Include="Views\Manage\_ViewImports.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jwt.Shared\Ex.Jwt.Shared.csproj" />
   </ItemGroup>
 
 </Project>
