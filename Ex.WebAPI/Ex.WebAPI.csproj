@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jwt.Shared\Ex.Jwt.Shared.csproj" />
+    <ProjectReference Include="..\Ex.Jwt.Shared\Ex.Jwt.Shared.csproj" />
   </ItemGroup>
 
 </Project>
